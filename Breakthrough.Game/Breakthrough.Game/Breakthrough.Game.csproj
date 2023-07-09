@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <ProjectGuid>{9252E17F-7D6B-4155-93F8-B7E01C7D7097}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Breakthrough</AssemblyName>
+    <SchemaVersion>2.0</SchemaVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\BoardStrategyManager.cs" />
+    <Compile Include="Engine\BoardTT.cs" />
+    <Compile Include="Engine\BoardTTEntry.cs" />
+    <Compile Include="Engine\RandomMT.cs" />
+    <Compile Include="Stopwatch.cs" />
+    <Compile Include="Engine\Board.cs" />
+    <Compile Include="Engine\BoardPosition.cs" />
+    <Compile Include="Engine\BoardSquare.cs" />
+    <Compile Include="Engine\GameEngine.cs" />
+    <Compile Include="Engine\GamePiece.cs" />
+    <Compile Include="Engine\GamePieceMoves.cs" />
+    <Compile Include="Engine\GamePieceValidMoves.cs" />
+    <Compile Include="Engine\MoveContent.cs" />
+    <Compile Include="Engine\MoveSearchTree.cs" />
+    <Compile Include="Engine\BoardEvaluation.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
